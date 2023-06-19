@@ -23,5 +23,6 @@ Route::get('result', function() {
 
 Route::get('students/kmit/first-year/computer-science-department/results', function() {
 
+
 });
 
