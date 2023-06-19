@@ -26,7 +26,8 @@
         </div>
     </nav>
     <nav class="flex justify-end px-4 items-center gap-x-5 bg-[#14777f] py-1">
-        <a href="/pay-fees" class="text-red-500 bg-yellow-300 border-[3px] border-red-500 text-2xl px-4 py-2">PAY
+        <a href="https://ssolive.myclassboard.com/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DDIL4KLQ05IV1JZOXCLM0%26redirect_uri%3Dhttps%253A%252F%252Ficici.myclassboard.com%252Fsso%252FCallback%26response_type%3Dcode%26scope%3Dopenid%2520profile%2520offline_access"
+            class="text-red-500 bg-yellow-300 border-[3px] border-red-500 text-2xl px-4 py-2">PAY
             FEES</a>
     </nav>
     <div class="flex flex-col w-full items-center">
@@ -34,7 +35,7 @@
             B.Tech 1 Year 1 Sem KR23 Supply MARCH-2023 Results
         </h1>
 
-        <form action="/result" method="get">
+        <form action="/students/kmit/first-year/computer-science-department/results" method="get">
             <div class="flex flex-col">
                 <div class="flex gap-x-3 py-5 items-center">
                     <label for="roll" class="text-md font-bold">Hall Ticket : </label>

@@ -21,10 +21,7 @@ Route::get('result', function() {
     return view('result');
 });
 
-Route::get('students/kmit/first-year-result/computer-science-department', function() {
+Route::get('students/kmit/first-year/computer-science-department/results', function() {
 
 });
 
-Route::get('/pay-fees', function() {
-    return view('payfees');
-});
