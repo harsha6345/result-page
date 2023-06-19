@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->integer("registered");
+            $table->foreignId('student_id')->constrained()->cascadeOnDelete();
             $table->integer("passed");
             $table->integer("appeared");
         });

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->integer("serial_number");
+            $table->foreignId('student_id')->constrained()->cascadeOnDelete();
             $table->string("subject_code");
             $table->string("subject_name");
             $table->string("grade_secured");
