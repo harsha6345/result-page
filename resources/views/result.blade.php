@@ -8,6 +8,73 @@
     <title>KMIT</title>
     <link href="https://cdn.tailwindcss.com/2.2.15/tailwind.min.css" rel="stylesheet">
     @vite('resources/css/app.css')
+    <style>
+        .flex-container {
+            width: 100%;
+            display: flex;
+            border: 1px solid black;
+        }
+
+        .flex-item {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .name-item {
+            width: 8%;
+        }
+
+        .name-d-item {
+            width: 30%;
+        }
+
+        .hall-item {
+            width: 16%;
+        }
+
+        .hall-d-item {
+            width: 16%;
+        }
+
+        .branch-item {
+            width: 15%;
+        }
+
+        .branch-d-item {
+            width: 15%;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 3px 5px;
+        }
+
+        @media all and (max-width: 720px) {
+            .flex-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                width: 500px;
+            }
+
+            .flex-item {
+                width: unset;
+            }
+        }
+
+        @media print {
+
+            /* Hide header with date, URL, and time */
+            header {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -54,6 +121,115 @@
                 </button>
             </div>
         </form>
+        <div id="result">
+            <div class="w-full flex flex-col items-center">
+                <div class="w-[500px] lg:w-[80%]">
+                    <div class="flex-container my-3">
+                        <div class="flex-item name-item">Name</div>
+                        <div class="flex-item name-d-item">BETHAM SRI HARSHA</div>
+                        <div class="flex-item hall-item">Hall Ticket</div>
+                        <div class="flex-item hall-d-item">22BD1A0569</div>
+                        <div class="flex-item branch-item">Branch</div>
+                        <div class="flex-item branch-d-item">CSE</div>
+                    </div>
+
+                    <div
+                        class="md:w-[70%] lg:[90%] sm:w-[500px] w-[350px] md:overflow-x-visible overflow-x-scroll mx-auto">
+                        <table id="myTable">
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Subject Code</th>
+                                    <th>Subjects</th>
+                                    <th>Grade Secured</th>
+                                    <th>Grade Points</th>
+                                    <th>Result</th>
+                                    <th>Credits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>21101</td>
+                                    <td>PROGRAMMING FOR PROBLEM SOLVING</td>
+                                    <td>O</td>
+                                    <td>10</td>
+                                    <td>P</td>
+                                    <td>3.5</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>21101</td>
+                                    <td>PROGRAMMING FOR PROBLEM SOLVING</td>
+                                    <td>O</td>
+                                    <td>10</td>
+                                    <td>P</td>
+                                    <td>3.5</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>21101</td>
+                                    <td>PROGRAMMING FOR PROBLEM SOLVING</td>
+                                    <td>O</td>
+                                    <td>10</td>
+                                    <td>P</td>
+                                    <td>3.5</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>21101</td>
+                                    <td>PROGRAMMING FOR PROBLEM SOLVING</td>
+                                    <td>O</td>
+                                    <td>10</td>
+                                    <td>P</td>
+                                    <td>3.5</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        Note:-2 <br />
+                                        indicates Withheld
+                                    </td>
+                                    <td>REGISTERED : 9</td>
+                                    <td>APPEARED</td>
+                                    <td>PASSED</td>
+                                    <td>TOTAL</td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">Result : PASS</td>
+                                    <td colspan="5">Semester Grade Point Average (SGPA)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full flex justify-center">
+            <button class="px-5 py-3 text-white bg-green-500" id="printing-btn">
+                Print
+            </button>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+            crossorigin="anonymous"></script>
+        <script src="print-this/printThis.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#printing-btn").click(function() {
+                    $("#result").printThis();
+                });
+            });
+        </script>
     </div>
 
 
